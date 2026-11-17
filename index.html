@@ -1,1 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --card: #ffffff;
+      --card-hover: #f4f4f5;
+      --border: #e4e4e7;
+      --border-hover: #d4d4d8;
+      --well: #f4f4f5;
+      --well-hover: #ffffff;
+      --fg: #09090b;
+      --muted: #71717a;
+    }
 
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #09090b;
+        --card: #121214;
+        --card-hover: #18181b;
+        --border: #222225;
+        --border-hover: #323236;
+        --well: #1a1a1e;
+        --well-hover: #242429;
+        --fg: #fafafa;
+        --muted: #71717a;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .grid {
+      width: 100%;
+      max-width: 540px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .tool {
+      height: 56px;
+      padding: 0 14px 0 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--fg);
+      outline: none;
+      transition: background-color 0.12s ease, border-color 0.12s ease, transform 0.12s ease;
+    }
+
+    .icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--well);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--fg);
+      transition: background-color 0.12s ease;
+    }
+
+    .icon i {
+      font-size: 18px;
+    }
+
+    .name {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      line-height: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .arrow {
+      margin-left: auto;
+      font-size: 14px;
+      color: var(--muted);
+      opacity: 0;
+      transform: translateX(-3px);
+      transition: opacity 0.12s ease, transform 0.12s ease;
+    }
+
+    .tool:hover,
+    .tool:focus-visible {
+      background: var(--card-hover);
+      border-color: var(--border-hover);
+    }
+
+    .tool:hover .icon,
+    .tool:focus-visible .icon {
+      background: var(--well-hover);
+    }
+
+    .tool:hover .arrow,
+    .tool:focus-visible .arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .tool:active {
+      transform: scale(0.985);
+    }
+
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: 1fr;
+        max-width: 340px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="grid">
+    <a class="tool" href="https://ayaanahmedstudios.github.io/font-library">
+      <span class="icon"><i class="ph ph-text-aa"></i></span>
+      <span class="name">Font Library</span>
+      <i class="ph ph-arrow-up-right arrow"></i>
+    </a>
+
+    <a class="tool" href="https://ayaanahmedstudios.github.io/pfp-creator">
+      <span class="icon"><i class="ph ph-user-circle"></i></span>
+      <span class="name">PFP Creator</span>
+      <i class="ph ph-arrow-up-right arrow"></i>
+    </a>
+
+    <a class="tool" href="https://ayaanahmedstudios.github.io/coaster-to-coaster">
+      <span class="icon"><i class="ph ph-bezier-curve"></i></span>
+      <span class="name">Coaster to Coaster</span>
+      <i class="ph ph-arrow-up-right arrow"></i>
+    </a>
+
+    <a class="tool" href="https://ayaanahmedstudios.github.io/picture-this">
+      <span class="icon"><i class="ph ph-aperture"></i></span>
+      <span class="name">Picture This</span>
+      <i class="ph ph-arrow-up-right arrow"></i>
+    </a>
+
+    <a class="tool" href="https://ayaanahmedstudios.github.io/freezing-variables">
+      <span class="icon"><i class="ph ph-sliders-horizontal"></i></span>
+      <span class="name">Freezing Variables</span>
+      <i class="ph ph-arrow-up-right arrow"></i>
+    </a>
+
+    <a class="tool" href="https://ayaanahmedstudios.github.io/cartogram">
+      <span class="icon"><i class="ph ph-map-trifold"></i></span>
+      <span class="name">Cartogram</span>
+      <i class="ph ph-arrow-up-right arrow"></i>
+    </a>
+
+    <a class="tool" href="https://ayaanahmedstudios.github.io/melting-statics">
+      <span class="icon"><i class="ph ph-waveform"></i></span>
+      <span class="name">Melting Statics</span>
+      <i class="ph ph-arrow-up-right arrow"></i>
+    </a>
+
+    <a class="tool" href="https://ayaanahmedstudios.github.io/social-mockups">
+      <span class="icon"><i class="ph ph-frame-corners"></i></span>
+      <span class="name">Social Mockups</span>
+      <i class="ph ph-arrow-up-right arrow"></i>
+    </a>
+  </main>
+
+</body>
+</html>
