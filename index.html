@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tools</title>
-  
+
   <link
     rel="icon"
     type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='white' d='M226.76 69.58a8 8 0 0 0-13.17-2.51l-36.69 36.69-24.66-4.11-4.11-24.66 36.69-36.69a8 8 0 0 0-2.51-13.17 72.05 72.05 0 0 0-92.49 87.25L35.72 166.5a32 32 0 0 0 45.25 45.25l54.12-54.1a72.05 72.05 0 0 0 91.67-88.07ZM69.66 200a16 16 0 1 1-22.63-22.63l53.76-53.77a72.44 72.44 0 0 0 22.63 22.63Z'/%3E%3C/svg%3E"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='white' d='M104 40H56a16 16 0 0 0-16 16v48a16 16 0 0 0 16 16h48a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16Zm96 0h-48a16 16 0 0 0-16 16v48a16 16 0 0 0 16 16h48a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16ZM104 136H56a16 16 0 0 0-16 16v48a16 16 0 0 0 16 16h48a16 16 0 0 0 16-16v-48a16 16 0 0 0-16-16Zm96 0h-48a16 16 0 0 0-16 16v48a16 16 0 0 0 16 16h48a16 16 0 0 0 16-16v-48a16 16 0 0 0-16-16Z'/%3E%3C/svg%3E"
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,12 +96,44 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      color: var(--fg);
       transition: background-color 0.12s ease;
     }
 
     .icon i {
       font-size: 18px;
+    }
+
+    .font-library .icon {
+      color: #0AE448;
+    }
+
+    .pfp-creator .icon {
+      color: #B026FF;
+    }
+
+    .coaster-to-coaster .icon {
+      color: #FFE000;
+    }
+
+    .picture-this .icon {
+      color: #FF6A00;
+    }
+
+    .freezing-variables .icon {
+      color: #FFD000;
+    }
+
+    .melting-statics .icon {
+      color: #FF4FA3;
+    }
+
+    .cartogram .icon {
+      color: #268BFF;
+    }
+
+    .social-mockups .icon {
+      background: #27272a;
+      color: #ffffff;
     }
 
     .name {
@@ -134,6 +166,11 @@
       background: var(--well-hover);
     }
 
+    .social-mockups:hover .icon,
+    .social-mockups:focus-visible .icon {
+      background: #18181b;
+    }
+
     .tool:hover .arrow,
     .tool:focus-visible .arrow {
       opacity: 1;
@@ -154,58 +191,56 @@
 </head>
 
 <body>
-
   <main class="grid">
 
-    <a class="tool" href="https://ayaanahmedstudios.github.io/font-library" target="_blank" rel="noopener noreferrer">
-      <span class="icon"><i class="ph ph-text-aa"></i></span>
+    <a class="tool font-library" href="https://ayaanahmedstudios.github.io/font-library" target="_blank" rel="noopener noreferrer">
+      <span class="icon"><i class="ph ph-text-t"></i></span>
       <span class="name">Font Library</span>
       <i class="ph ph-arrow-up-right arrow"></i>
     </a>
 
-    <a class="tool" href="https://ayaanahmedstudios.github.io/pfp-creator" target="_blank" rel="noopener noreferrer">
+    <a class="tool pfp-creator" href="https://ayaanahmedstudios.github.io/pfp-creator" target="_blank" rel="noopener noreferrer">
       <span class="icon"><i class="ph ph-user-circle"></i></span>
       <span class="name">PFP Creator</span>
       <i class="ph ph-arrow-up-right arrow"></i>
     </a>
 
-    <a class="tool" href="https://ayaanahmedstudios.github.io/coaster-to-coaster" target="_blank" rel="noopener noreferrer">
-      <span class="icon"><i class="ph ph-bezier-curve"></i></span>
+    <a class="tool coaster-to-coaster" href="https://ayaanahmedstudios.github.io/coaster-to-coaster" target="_blank" rel="noopener noreferrer">
+      <span class="icon"><i class="ph ph-balloon"></i></span>
       <span class="name">Coaster to Coaster</span>
       <i class="ph ph-arrow-up-right arrow"></i>
     </a>
 
-    <a class="tool" href="https://ayaanahmedstudios.github.io/picture-this" target="_blank" rel="noopener noreferrer">
+    <a class="tool picture-this" href="https://ayaanahmedstudios.github.io/picture-this" target="_blank" rel="noopener noreferrer">
       <span class="icon"><i class="ph ph-aperture"></i></span>
       <span class="name">Picture This</span>
       <i class="ph ph-arrow-up-right arrow"></i>
     </a>
 
-    <a class="tool" href="https://ayaanahmedstudios.github.io/freezing-variables" target="_blank" rel="noopener noreferrer">
-      <span class="icon"><i class="ph ph-sliders-horizontal"></i></span>
+    <a class="tool freezing-variables" href="https://ayaanahmedstudios.github.io/freezing-variables" target="_blank" rel="noopener noreferrer">
+      <span class="icon"><i class="ph ph-function"></i></span>
       <span class="name">Freezing Variables</span>
       <i class="ph ph-arrow-up-right arrow"></i>
     </a>
 
-    <a class="tool" href="https://ayaanahmedstudios.github.io/cartogram" target="_blank" rel="noopener noreferrer">
-      <span class="icon"><i class="ph ph-map-trifold"></i></span>
-      <span class="name">Cartogram</span>
-      <i class="ph ph-arrow-up-right arrow"></i>
-    </a>
-
-    <a class="tool" href="https://ayaanahmedstudios.github.io/melting-statics" target="_blank" rel="noopener noreferrer">
-      <span class="icon"><i class="ph ph-waveform"></i></span>
+    <a class="tool melting-statics" href="https://ayaanahmedstudios.github.io/melting-statics" target="_blank" rel="noopener noreferrer">
+      <span class="icon"><i class="ph ph-text-italic"></i></span>
       <span class="name">Melting Statics</span>
       <i class="ph ph-arrow-up-right arrow"></i>
     </a>
 
-    <a class="tool" href="https://ayaanahmedstudios.github.io/social-mockups" target="_blank" rel="noopener noreferrer">
-      <span class="icon"><i class="ph ph-frame-corners"></i></span>
+    <a class="tool cartogram" href="https://ayaanahmedstudios.github.io/cartogram" target="_blank" rel="noopener noreferrer">
+      <span class="icon"><i class="ph ph-compass"></i></span>
+      <span class="name">Cartogram</span>
+      <i class="ph ph-arrow-up-right arrow"></i>
+    </a>
+
+    <a class="tool social-mockups" href="https://ayaanahmedstudios.github.io/social-mockups" target="_blank" rel="noopener noreferrer">
+      <span class="icon"><i class="ph ph-user-square"></i></span>
       <span class="name">Social Mockups</span>
       <i class="ph ph-arrow-up-right arrow"></i>
     </a>
 
   </main>
-
 </body>
 </html>
