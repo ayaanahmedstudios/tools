@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,26 +61,26 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 36px 24px;
     }
 
     .grid {
       width: 100%;
-      max-width: 540px;
+      max-width: 680px;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
+      gap: 16px;
     }
 
     .tool {
-      height: 56px;
-      padding: 0 14px 0 10px;
+      min-height: 88px;
+      padding: 0 20px 0 16px;
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 15px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
       text-decoration: none;
       color: var(--fg);
       outline: none;
@@ -87,9 +88,9 @@
     }
 
     .icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
+      width: 48px;
+      height: 48px;
+      border-radius: 11px;
       background: var(--well);
       display: flex;
       align-items: center;
@@ -99,7 +100,7 @@
     }
 
     .icon i {
-      font-size: 18px;
+      font-size: 23px;
     }
 
     .font-library .icon {
@@ -136,10 +137,10 @@
     }
 
     .name {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 500;
       letter-spacing: -0.015em;
-      line-height: 1;
+      line-height: 1.2;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -147,11 +148,12 @@
 
     .arrow {
       margin-left: auto;
-      font-size: 14px;
+      font-size: 18px;
       color: var(--muted);
       opacity: 0;
       transform: translateX(-3px);
       transition: opacity 0.12s ease, transform 0.12s ease;
+      flex-shrink: 0;
     }
 
     .tool:hover,
@@ -176,14 +178,42 @@
       transform: translateX(0);
     }
 
+    .tool:focus-visible {
+      outline: 2px solid var(--fg);
+      outline-offset: 3px;
+    }
+
     .tool:active {
       transform: scale(0.985);
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 540px) {
+      body {
+        padding: 28px 18px;
+      }
+
       .grid {
         grid-template-columns: 1fr;
-        max-width: 340px;
+        max-width: 440px;
+        gap: 14px;
+      }
+
+      .tool {
+        min-height: 84px;
+        padding: 0 20px 0 16px;
+      }
+
+      .arrow {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .tool,
+      .icon,
+      .arrow {
+        transition: none;
       }
     }
   </style>
